@@ -4,7 +4,7 @@ import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
 @Serializable
-data class SpeciesDetails(
+data class SpeciesDetails (
         val id: Int,
         @SerialName("common_name") val commonName: String,
         @SerialName("scientific_name") val scientificName: List<String>,
@@ -31,17 +31,17 @@ data class SpeciesDetails(
 )
 
 @Serializable
-data class WateringGeneralBenchmark(
+data class WateringGeneralBenchmark (
         val value: String,
         val unit: String
 )
 
 @Serializable
-data class Image(
+data class Image (
         @SerialName("default_name") val defaultName: ImageMeta)
 
 @Serializable
-data class ImageMeta(
+data class ImageMeta (
         @SerialName("image_id") val imageId: String,
         @SerialName("license_name")  val licenseName: String,
         @SerialName("license_url") val licenseUrl: String,
