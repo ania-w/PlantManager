@@ -1,4 +1,4 @@
-package pl.aniaw.plantmanager.model;
+package pl.aniaw.plantmanager.data.model
 
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
@@ -38,7 +38,8 @@ data class WateringGeneralBenchmark (
 
 @Serializable
 data class Image (
-        @SerialName("default_name") val defaultName: ImageMeta)
+        @SerialName("default_name") val defaultName: ImageMeta
+)
 
 @Serializable
 data class ImageMeta (

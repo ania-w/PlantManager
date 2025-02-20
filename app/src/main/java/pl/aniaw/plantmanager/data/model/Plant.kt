@@ -1,4 +1,4 @@
-package pl.aniaw.plantmanager.model
+package pl.aniaw.plantmanager.data.model
 
 import java.time.LocalDate
 
