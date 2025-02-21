@@ -1,7 +1,9 @@
 package pl.aniaw.plantmanager.data.remote
 
+import PlantDetailsResponse
 import pl.aniaw.plantmanager.data.remote.model.PlantListResponse
 import retrofit2.http.GET
+import retrofit2.http.Path
 import retrofit2.http.Query
 
 interface PlantApiService {
@@ -18,4 +20,9 @@ interface PlantApiService {
                                 @Query("indoor") indoor: Int? = null,
                                 @Query("hardiness") hardiness: Int? = null
                                 ): PlantListResponse
+
+    @GET("species/details/{id}")
+    suspend fun getPlantDetails(@Path("id") id: Int,
+                                 @Query("key") key: String
+                                ): PlantDetailsResponse
 }
